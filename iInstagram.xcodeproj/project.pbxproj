@@ -16,6 +16,7 @@
 		EF5A11D32A7BBF7700C4DCB3 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11D22A7BBF7700C4DCB3 /* UserStatView.swift */; };
 		EF5A11D52A7BCD5B00C4DCB3 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11D42A7BCD5B00C4DCB3 /* FeedView.swift */; };
 		EF5A11D72A7BCD6B00C4DCB3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11D62A7BCD6B00C4DCB3 /* FeedCell.swift */; };
+		EF5A11D92A7BDBFC00C4DCB3 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11D82A7BDBFC00C4DCB3 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		EF5A11D22A7BBF7700C4DCB3 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		EF5A11D42A7BCD5B00C4DCB3 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		EF5A11D62A7BCD6B00C4DCB3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		EF5A11D82A7BDBFC00C4DCB3 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		EF5A11CA2A7BAE4D00C4DCB3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				EF5A11D82A7BDBFC00C4DCB3 /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				EF5A11B62A7BADE900C4DCB3 /* ContentView.swift in Sources */,
 				EF5A11B42A7BADE900C4DCB3 /* iInstagramApp.swift in Sources */,
 				EF5A11CE2A7BAE7400C4DCB3 /* MainTabVIew.swift in Sources */,
+				EF5A11D92A7BDBFC00C4DCB3 /* SearchView.swift in Sources */,
 				EF5A11D32A7BBF7700C4DCB3 /* UserStatView.swift in Sources */,
 				EF5A11D52A7BCD5B00C4DCB3 /* FeedView.swift in Sources */,
 				EF5A11D02A7BBAC100C4DCB3 /* ProfieView.swift in Sources */,
