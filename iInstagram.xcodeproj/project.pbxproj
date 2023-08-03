@@ -11,6 +11,11 @@
 		EF5A11B62A7BADE900C4DCB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11B52A7BADE900C4DCB3 /* ContentView.swift */; };
 		EF5A11B82A7BADEB00C4DCB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5A11B72A7BADEB00C4DCB3 /* Assets.xcassets */; };
 		EF5A11BB2A7BADEB00C4DCB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5A11BA2A7BADEB00C4DCB3 /* Preview Assets.xcassets */; };
+		EF5A11CE2A7BAE7400C4DCB3 /* MainTabVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11CD2A7BAE7400C4DCB3 /* MainTabVIew.swift */; };
+		EF5A11D02A7BBAC100C4DCB3 /* ProfieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11CF2A7BBAC100C4DCB3 /* ProfieView.swift */; };
+		EF5A11D32A7BBF7700C4DCB3 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11D22A7BBF7700C4DCB3 /* UserStatView.swift */; };
+		EF5A11D52A7BCD5B00C4DCB3 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11D42A7BCD5B00C4DCB3 /* FeedView.swift */; };
+		EF5A11D72A7BCD6B00C4DCB3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A11D62A7BCD6B00C4DCB3 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		EF5A11B52A7BADE900C4DCB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF5A11B72A7BADEB00C4DCB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF5A11BA2A7BADEB00C4DCB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF5A11CD2A7BAE7400C4DCB3 /* MainTabVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVIew.swift; sourceTree = "<group>"; };
+		EF5A11CF2A7BBAC100C4DCB3 /* ProfieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfieView.swift; sourceTree = "<group>"; };
+		EF5A11D22A7BBF7700C4DCB3 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		EF5A11D42A7BCD5B00C4DCB3 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		EF5A11D62A7BCD6B00C4DCB3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +61,11 @@
 		EF5A11B22A7BADE900C4DCB3 /* iInstagram */ = {
 			isa = PBXGroup;
 			children = (
-				EF5A11B32A7BADE900C4DCB3 /* iInstagramApp.swift */,
+				EF5A11C52A7BAE1F00C4DCB3 /* Services */,
+				EF5A11C42A7BAE1700C4DCB3 /* Models */,
+				EF5A11C32A7BAE0700C4DCB3 /* Extensions */,
+				EF5A11C22A7BADFF00C4DCB3 /* Core */,
+				EF5A11C12A7BADF900C4DCB3 /* App */,
 				EF5A11B52A7BADE900C4DCB3 /* ContentView.swift */,
 				EF5A11B72A7BADEB00C4DCB3 /* Assets.xcassets */,
 				EF5A11B92A7BADEB00C4DCB3 /* Preview Content */,
@@ -65,6 +79,111 @@
 				EF5A11BA2A7BADEB00C4DCB3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF5A11C12A7BADF900C4DCB3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A11B32A7BADE900C4DCB3 /* iInstagramApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EF5A11C22A7BADFF00C4DCB3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A11D12A7BBF5F00C4DCB3 /* Components */,
+				EF5A11CC2A7BAE6100C4DCB3 /* UploadPost */,
+				EF5A11CB2A7BAE5400C4DCB3 /* TabBar */,
+				EF5A11CA2A7BAE4D00C4DCB3 /* Search */,
+				EF5A11C92A7BAE4800C4DCB3 /* Root */,
+				EF5A11C82A7BAE3F00C4DCB3 /* Profile */,
+				EF5A11C72A7BAE3800C4DCB3 /* Feed */,
+				EF5A11C62A7BAE3000C4DCB3 /* Authentication */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EF5A11C32A7BAE0700C4DCB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF5A11C42A7BAE1700C4DCB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF5A11C52A7BAE1F00C4DCB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EF5A11C62A7BAE3000C4DCB3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EF5A11C72A7BAE3800C4DCB3 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A11D42A7BCD5B00C4DCB3 /* FeedView.swift */,
+				EF5A11D62A7BCD6B00C4DCB3 /* FeedCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		EF5A11C82A7BAE3F00C4DCB3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A11CF2A7BBAC100C4DCB3 /* ProfieView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EF5A11C92A7BAE4800C4DCB3 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		EF5A11CA2A7BAE4D00C4DCB3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EF5A11CB2A7BAE5400C4DCB3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A11CD2A7BAE7400C4DCB3 /* MainTabVIew.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EF5A11CC2A7BAE6100C4DCB3 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		EF5A11D12A7BBF5F00C4DCB3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A11D22A7BBF7700C4DCB3 /* UserStatView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5A11D72A7BCD6B00C4DCB3 /* FeedCell.swift in Sources */,
 				EF5A11B62A7BADE900C4DCB3 /* ContentView.swift in Sources */,
 				EF5A11B42A7BADE900C4DCB3 /* iInstagramApp.swift in Sources */,
+				EF5A11CE2A7BAE7400C4DCB3 /* MainTabVIew.swift in Sources */,
+				EF5A11D32A7BBF7700C4DCB3 /* UserStatView.swift in Sources */,
+				EF5A11D52A7BCD5B00C4DCB3 /* FeedView.swift in Sources */,
+				EF5A11D02A7BBAC100C4DCB3 /* ProfieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
