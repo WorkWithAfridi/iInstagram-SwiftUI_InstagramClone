@@ -11,7 +11,8 @@ import SwiftUI
 struct iInstagramApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabVIew()
+//            MainTabVIew()
+            LoginView()
         }
     }
 }
