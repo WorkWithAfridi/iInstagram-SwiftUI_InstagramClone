@@ -29,13 +29,8 @@ struct CreateUserNameView: View {
                 CreatePasswordView()
                     .navigationBarBackButtonHidden(true)
             } label: {
-                Text("Create password")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+                Text("Confirm Username")
+                    .modifier(IGButtonTextFieldModifier())
             }.padding(.vertical)
             Spacer()
         }.toolbar{

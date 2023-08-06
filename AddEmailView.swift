@@ -29,13 +29,8 @@ struct AddEmailView: View {
                 CreateUserNameView()
                     .navigationBarBackButtonHidden(true)
             } label: {
-                Text("Go to username")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+                Text("Confirm Email")
+                    .modifier(IGButtonTextFieldModifier())
             }.padding(.vertical)
             Spacer()
         }.toolbar{

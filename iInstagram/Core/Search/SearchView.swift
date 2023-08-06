@@ -10,30 +10,40 @@ import SwiftUI
 struct SearchView: View {
     @State private var searchText = ""
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack {
                 ScrollView{
                     LazyVStack(spacing: 12){
-                        ForEach(0...20, id: \.self){
+                        ForEach(UserModel.MOCK_USERS){
                             user in
-                            HStack {
-                                Image("profile-img")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 40, height: 40)
-                                    .clipShape(Circle())
-                                VStack(alignment: .leading) {
-                                    Text("Mr_User")
-                                        .fontWeight(.semibold)
-                                    Text("Sherlock Homes")
-                                }.font(.footnote)
-                                Spacer()
-                            }.padding(.horizontal)
+                            NavigationLink(value: user) {
+                                HStack {
+                                    Image(user.profileImageUrl ?? "")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 40, height: 40)
+                                        .clipShape(Circle())
+                                    VStack(alignment: .leading) {
+                                        Text(user.username)
+                                            .fontWeight(.semibold)
+                                        if user.fullname != nil{
+                                            Text(user.fullname ?? "")
+                                        }
+                                    }.font(.footnote)
+                                    Spacer()
+                                }
+                                .foregroundColor(.black)
+                                .padding(.horizontal)
+
+                            }
                         }
                     }
                     .padding(.top, 2)
                     .searchable(text: $searchText, prompt: "Search...")
                 }
+            }.navigationDestination(for: UserModel.self) { user in
+                ProfieView(
+                    user: user                )
             }
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)

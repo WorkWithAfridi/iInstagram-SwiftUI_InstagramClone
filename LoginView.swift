@@ -38,18 +38,14 @@ struct LoginView: View {
                             .padding(.trailing, 28)
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
-                    Button{
-                        print("Show forgot password")
+                    
+                    NavigationLink {
+                        MainTabVIew()
+                            .navigationBarBackButtonHidden(true)
                     } label: {
                         Text("Login")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                    }
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-                    .padding(.vertical)
+                            .modifier(IGButtonTextFieldModifier())
+                    }.padding(.vertical, 16)
                     HStack{
                         Rectangle()
                             .frame(width: (UIScreen.main.bounds.width/2) - 40, height: 0.5)

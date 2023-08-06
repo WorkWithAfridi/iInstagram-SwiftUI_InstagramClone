@@ -1,25 +1,27 @@
 //
-//  ProfieView.swift
+//  CurrentUserProfileView.swift
 //  iInstagram
 //
-//  Created by Khondakar Afridi on 3/8/23.
+//  Created by Khondakar Afridi on 6/8/23.
 //
 
 import SwiftUI
 
-struct ProfieView: View {
-    let user: UserModel
-    
+struct CurrentUserProfileView: View {
+
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
-    ]    
+    ]
+
+
     var body: some View {
-        ScrollView{
+        NavigationStack {
+            ScrollView{
                 VStack(spacing: 10){
                     HStack{
-                        Image(user.profileImageUrl ?? "")
+                        Image("profile-img")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)
@@ -42,21 +44,17 @@ struct ProfieView: View {
                     }
                     .padding(.horizontal)
                     VStack(alignment: .leading, spacing: 4){
-                        if user.fullname != nil{
-                            Text(user.fullname!)
-                                .font(.footnote)
-                                .fontWeight(.semibold)
-                        }
-                        if user.bio != nil{
-                            Text(user.bio!)
-                                .font(.footnote)
-                        }
+                        Text("Khondakar Afridi")
+                            .font(.footnote)
+                            .fontWeight(.semibold)
+                        Text("Hello world")
+                            .font(.footnote)
                     }.frame(
                         maxWidth: .infinity,
                         alignment: Alignment.leading
                     ).padding(.horizontal)
                     Button{
-                        
+
                     } label:{
                         Text("Edit Profile")
                             .font(.subheadline)
@@ -84,13 +82,22 @@ struct ProfieView: View {
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button{
+
+                    } label: {
+                        Image(systemName: "line.3.horizontal").foregroundColor(.black)
+                    }
+                }
+            }
+        }
     }
 }
 
-struct ProfieView_Previews: PreviewProvider {
+
+struct CurrentUserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfieView(
-            user: UserModel.MOCK_USERS[0]
-        )
+        CurrentUserProfileView()
     }
 }

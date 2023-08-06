@@ -12,7 +12,7 @@ struct CreatePasswordView: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack{
-            Text("Create passowrd")
+            Text("Create password")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.bottom, 1)
@@ -28,13 +28,8 @@ struct CreatePasswordView: View {
             NavigationLink{
                 CompleteSignUpView()
             } label: {
-                Text("Next")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+                Text("Confirm Password")
+                    .modifier(IGButtonTextFieldModifier())
             }.padding(.vertical)
             Spacer()
         }.toolbar{
