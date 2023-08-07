@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct CurrentUserProfileView: View {
-
-    private let gridItems: [GridItem] = [
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1),
-    ]
-
+    
+    let user: UserModel
+    
+    var posts: [PostModel] {
+        return PostModel.MOCK_POSTS.filter({
+            $0.user?.username == user.username
+        })
+    }
 
     var body: some View {
         NavigationStack {
             ScrollView{
                 VStack(spacing: 10){
                     HStack{
-                        Image("profile-img")
+                        Image(user.profileImageUrl ?? "")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)
@@ -44,17 +45,21 @@ struct CurrentUserProfileView: View {
                     }
                     .padding(.horizontal)
                     VStack(alignment: .leading, spacing: 4){
-                        Text("Khondakar Afridi")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                        Text("Hello world")
-                            .font(.footnote)
+                        if user.fullname != nil{
+                            Text(user.fullname!)
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                        }
+                        if user.bio != nil{
+                            Text(user.bio!)
+                                .font(.footnote)
+                        }
                     }.frame(
                         maxWidth: .infinity,
                         alignment: Alignment.leading
                     ).padding(.horizontal)
                     Button{
-
+                        
                     } label:{
                         Text("Edit Profile")
                             .font(.subheadline)
@@ -71,14 +76,7 @@ struct CurrentUserProfileView: View {
                     }
                     Divider()
                 }
-                LazyVGrid(columns: gridItems, spacing: 1) {
-                    ForEach(0...15, id: \.self){
-                        index in
-                            Image("profile-img")
-                                .resizable()
-                                .scaledToFill()
-                    }
-                }
+                ProfilePostGridView(posts: posts)
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
@@ -98,6 +96,7 @@ struct CurrentUserProfileView: View {
 
 struct CurrentUserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentUserProfileView()
+        CurrentUserProfileView(
+            user: UserModel.MOCK_USERS[1])
     }
 }

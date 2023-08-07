@@ -11,7 +11,7 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     var body: some View {
-        NavigationStack{
+//        NavigationStack{
             VStack{
                 Spacer()
                 Image("instagram")
@@ -82,7 +82,7 @@ struct LoginView: View {
                     .font(.footnote)
                 }.padding(.vertical, 16)
             }
-        }
+//        }
     }
 }
 

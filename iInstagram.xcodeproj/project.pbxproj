@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF08EAA72A8114B200AACDBA /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08EAA62A8114B200AACDBA /* PostModel.swift */; };
+		EF08EAAC2A8126C600AACDBA /* ProfilePostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08EAAB2A8126C600AACDBA /* ProfilePostGridView.swift */; };
 		EF3B862F2A7F809D0089B0F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B862E2A7F809D0089B0F6 /* LoginView.swift */; };
 		EF3B86312A7F87DA0089B0F6 /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B86302A7F87DA0089B0F6 /* AddEmailView.swift */; };
 		EF3B86332A7F8C440089B0F6 /* IGTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B86322A7F8C440089B0F6 /* IGTextFieldModifier.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF08EAA62A8114B200AACDBA /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		EF08EAAB2A8126C600AACDBA /* ProfilePostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostGridView.swift; sourceTree = "<group>"; };
 		EF3B862E2A7F809D0089B0F6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = SOURCE_ROOT; };
 		EF3B86302A7F87DA0089B0F6 /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = SOURCE_ROOT; };
 		EF3B86322A7F8C440089B0F6 /* IGTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EF3B863E2A7FD2CC0089B0F6 /* UserModel.swift */,
+				EF08EAA62A8114B200AACDBA /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				EF5A11D22A7BBF7700C4DCB3 /* UserStatView.swift */,
 				EF3B86322A7F8C440089B0F6 /* IGTextFieldModifier.swift */,
 				EF3B863C2A7FD1530089B0F6 /* IGButtonTextFieldModifier.swift */,
+				EF08EAAB2A8126C600AACDBA /* ProfilePostGridView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -286,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF08EAAC2A8126C600AACDBA /* ProfilePostGridView.swift in Sources */,
 				EF5A11D72A7BCD6B00C4DCB3 /* FeedCell.swift in Sources */,
+				EF08EAA72A8114B200AACDBA /* PostModel.swift in Sources */,
 				EF5A11B62A7BADE900C4DCB3 /* ContentView.swift in Sources */,
 				EF3B86352A7F8E6E0089B0F6 /* CreateUserNameView.swift in Sources */,
 				EF3B863D2A7FD1530089B0F6 /* IGButtonTextFieldModifier.swift in Sources */,

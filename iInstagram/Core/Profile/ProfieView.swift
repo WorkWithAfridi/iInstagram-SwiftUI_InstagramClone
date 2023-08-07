@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ProfieView: View {
     let user: UserModel
+    var posts: [PostModel] {
+        return PostModel.MOCK_POSTS.filter({
+            $0.user?.username == user.username
+        })
+    }
     
-    private let gridItems: [GridItem] = [
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1),
-    ]    
     var body: some View {
         ScrollView{
                 VStack(spacing: 10){
@@ -58,7 +58,7 @@ struct ProfieView: View {
                     Button{
                         
                     } label:{
-                        Text("Edit Profile")
+                        Text("Follow")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .frame(width: 360, height: 32)
@@ -73,14 +73,7 @@ struct ProfieView: View {
                     }
                     Divider()
                 }
-                LazyVGrid(columns: gridItems, spacing: 1) {
-                    ForEach(0...15, id: \.self){
-                        index in
-                            Image("profile-img")
-                                .resizable()
-                                .scaledToFill()
-                    }
-                }
+                ProfilePostGridView(posts: posts)
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
