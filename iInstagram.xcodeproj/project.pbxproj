@@ -180,6 +180,7 @@
 		EF5A11C82A7BAE3F00C4DCB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EF3B86402A7FDA250089B0F6 /* CurrentUserProfileView.swift */,
 				EF5A11CF2A7BBAC100C4DCB3 /* ProfieView.swift */,
 			);
 			path = Profile;
@@ -211,7 +212,6 @@
 		EF5A11CC2A7BAE6100C4DCB3 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				EF3B86402A7FDA250089B0F6 /* CurrentUserProfileView.swift */,
 				EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */,
 			);
 			path = UploadPost;
