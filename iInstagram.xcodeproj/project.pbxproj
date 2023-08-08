@@ -89,6 +89,7 @@
 		EF5A11B22A7BADE900C4DCB3 /* iInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				EFD3E0E92A825A820015E0C6 /* ViewModels */,
 				EF5A11C52A7BAE1F00C4DCB3 /* Services */,
 				EF5A11C42A7BAE1700C4DCB3 /* Models */,
 				EF5A11C32A7BAE0700C4DCB3 /* Extensions */,
@@ -180,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				EF5A11CF2A7BBAC100C4DCB3 /* ProfieView.swift */,
-				EF3B86402A7FDA250089B0F6 /* CurrentUserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -226,6 +226,14 @@
 				EF08EAAB2A8126C600AACDBA /* ProfilePostGridView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		EFD3E0E92A825A820015E0C6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EF3B86402A7FDA250089B0F6 /* CurrentUserProfileView.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
