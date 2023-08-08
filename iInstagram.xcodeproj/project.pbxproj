@@ -211,8 +211,8 @@
 		EF5A11CC2A7BAE6100C4DCB3 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
+				EF3B86402A7FDA250089B0F6 /* CurrentUserProfileView.swift */,
 				EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */,
-				EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 		EFD3E0E92A825A820015E0C6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EF3B86402A7FDA250089B0F6 /* CurrentUserProfileView.swift */,
+				EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
