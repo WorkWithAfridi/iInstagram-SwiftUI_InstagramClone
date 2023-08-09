@@ -37,6 +37,7 @@
 		EF96945F2A82B37800F78077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF96945E2A82B37800F78077 /* GoogleService-Info.plist */; };
 		EFD3E0E52A8233190015E0C6 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */; };
 		EFD3E0E72A8238230015E0C6 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */; };
+		EFDAAF762A8367AE00CD6FF8 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDAAF752A8367AE00CD6FF8 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		EF96945E2A82B37800F78077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
+		EFDAAF752A8367AE00CD6FF8 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		EF5A11C62A7BAE3000C4DCB3 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				EFDAAF742A83679F00CD6FF8 /* ViewModel */,
 				EF9694572A82ACAA00F78077 /* Service */,
 				EF9694562A82AC8E00F78077 /* View */,
 			);
@@ -285,6 +288,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		EFDAAF742A83679F00CD6FF8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFDAAF752A8367AE00CD6FF8 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,6 +389,7 @@
 				EF5A11CE2A7BAE7400C4DCB3 /* MainTabVIew.swift in Sources */,
 				EF3B86312A7F87DA0089B0F6 /* AddEmailView.swift in Sources */,
 				EF96945D2A82B20F00F78077 /* ContentViewModel.swift in Sources */,
+				EFDAAF762A8367AE00CD6FF8 /* RegistrationViewModel.swift in Sources */,
 				EFD3E0E72A8238230015E0C6 /* UploadPostViewModel.swift in Sources */,
 				EF3B86392A7F98260089B0F6 /* CompleteSignUpView.swift in Sources */,
 				EF5A11D92A7BDBFC00C4DCB3 /* SearchView.swift in Sources */,

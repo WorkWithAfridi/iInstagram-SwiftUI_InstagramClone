@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct CompleteSignUpView: View {
+    @EnvironmentObject var viewModel: RegistrationViewModel
     var body: some View {
         VStack{
             Text("Welcome to Instagram,")
                 .font(.title2)
                 .fontWeight(.bold)
-            Text("Khondakar Afridi")
+            Text(viewModel.username)
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.bottom, 1)
             Text("Click below to complete registration and start using Instagram.")
                 .font(.footnote)
                 .foregroundColor(.gray)
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.center)    
                 .padding(.horizontal, 34)
                 .padding(.bottom, 1)
-            NavigationLink{
-                Text("Next view")
+            Button{
+                Task { try await viewModel.createUser() }
             } label: {
                 Text("Complete Sign Up")
                     .font(.subheadline)
