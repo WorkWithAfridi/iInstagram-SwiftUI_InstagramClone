@@ -36,6 +36,8 @@
 		EF9694592A82ACBB00F78077 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9694582A82ACBB00F78077 /* AuthService.swift */; };
 		EF96945D2A82B20F00F78077 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96945C2A82B20F00F78077 /* ContentViewModel.swift */; };
 		EF96945F2A82B37800F78077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF96945E2A82B37800F78077 /* GoogleService-Info.plist */; };
+		EF9694622A86766200F78077 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9694612A86766200F78077 /* UserService.swift */; };
+		EF9694672A86773300F78077 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9694662A86773300F78077 /* SearchViewModel.swift */; };
 		EFD3E0E52A8233190015E0C6 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */; };
 		EFD3E0E72A8238230015E0C6 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */; };
 		EFDAAF762A8367AE00CD6FF8 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDAAF752A8367AE00CD6FF8 /* RegistrationViewModel.swift */; };
@@ -68,6 +70,8 @@
 		EF9694582A82ACBB00F78077 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EF96945C2A82B20F00F78077 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		EF96945E2A82B37800F78077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF9694612A86766200F78077 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EF9694662A86773300F78077 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		EFDAAF752A8367AE00CD6FF8 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		EF5A11C52A7BAE1F00C4DCB3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EF9694612A86766200F78077 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -214,7 +219,8 @@
 		EF5A11CA2A7BAE4D00C4DCB3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				EF5A11D82A7BDBFC00C4DCB3 /* SearchView.swift */,
+				EF9694652A86771C00F78077 /* ViewModel */,
+				EF9694642A86771600F78077 /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -278,6 +284,22 @@
 			isa = PBXGroup;
 			children = (
 				EF96945C2A82B20F00F78077 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF9694642A86771600F78077 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A11D82A7BDBFC00C4DCB3 /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF9694652A86771C00F78077 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF9694662A86773300F78077 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -385,6 +407,7 @@
 				EF08EAA72A8114B200AACDBA /* PostModel.swift in Sources */,
 				EF5A11B62A7BADE900C4DCB3 /* ContentView.swift in Sources */,
 				EF9694592A82ACBB00F78077 /* AuthService.swift in Sources */,
+				EF9694622A86766200F78077 /* UserService.swift in Sources */,
 				EF3B86352A7F8E6E0089B0F6 /* CreateUserNameView.swift in Sources */,
 				EF3B863D2A7FD1530089B0F6 /* IGButtonTextFieldModifier.swift in Sources */,
 				EF5A11B42A7BADE900C4DCB3 /* iInstagramApp.swift in Sources */,
@@ -402,6 +425,7 @@
 				EF5A11D32A7BBF7700C4DCB3 /* UserStatView.swift in Sources */,
 				EF5A11D52A7BCD5B00C4DCB3 /* FeedView.swift in Sources */,
 				EF5A11D02A7BBAC100C4DCB3 /* ProfieView.swift in Sources */,
+				EF9694672A86773300F78077 /* SearchViewModel.swift in Sources */,
 				EF3B86372A7F96F80089B0F6 /* CreatePasswordView.swift in Sources */,
 				EF3B86412A7FDA250089B0F6 /* CurrentUserProfileView.swift in Sources */,
 			);

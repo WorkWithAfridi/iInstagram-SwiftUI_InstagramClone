@@ -19,7 +19,7 @@ struct ProfieView: View {
         ScrollView{
                 VStack(spacing: 10){
                     HStack{
-                        Image(user.profileImageUrl ?? "")
+                        Image(user.profileImageUrl ?? "profile-img")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)
@@ -51,6 +51,7 @@ struct ProfieView: View {
                             Text(user.bio!)
                                 .font(.footnote)
                         }
+                        Text(user.username)
                     }.frame(
                         maxWidth: .infinity,
                         alignment: Alignment.leading
