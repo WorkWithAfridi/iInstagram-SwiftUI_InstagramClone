@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainTabVIew: View {
+    let user: UserModel
     @State private var mainTabViewIndex = 0
     var body: some View {
         TabView(selection: $mainTabViewIndex){
@@ -43,8 +44,7 @@ struct MainTabVIew: View {
                     Image(systemName: "heart")
                 }
                 .tag(3)
-            CurrentUserProfileView(
-                user: UserModel.MOCK_USERS[1])
+            CurrentUserProfileView(user: user)
                 .onAppear{
                     mainTabViewIndex = 4
                 }
@@ -58,6 +58,6 @@ struct MainTabVIew: View {
 
 struct MainTabVIew_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabVIew()
+        MainTabVIew(user: UserModel.MOCK_USERS[1])
     }
 }
