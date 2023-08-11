@@ -57,20 +57,26 @@ struct ProfieView: View {
                         alignment: Alignment.leading
                     ).padding(.horizontal)
                     Button{
-                        
+                        if(user.isCurrentUser){
+                            print("Show profile")
+                        }else{
+                            print("Follow user")
+                        }
                     } label:{
-                        Text("Follow")
+                        Text(user.isCurrentUser ? "Edit Profile": "Follow")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .frame(width: 360, height: 32)
-                            .foregroundColor(.black)
+                            .background(user.isCurrentUser ? .white : Color(.systemBlue))
+                            .foregroundColor(user.isCurrentUser ? .black : .white)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 6)
                                     .stroke(
-                                        Color.gray,
+                                        user.isCurrentUser ? Color.gray : .clear,
                                         lineWidth: 1
                                     )
                             )
+                            .cornerRadius(4)
                     }
                     Divider()
                 }
