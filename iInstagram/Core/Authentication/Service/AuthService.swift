@@ -34,6 +34,7 @@ class AuthService{
         }
     }
     
+    @MainActor
     func createUser(email: String, password: String, username: String) async throws{
         print("Email: \(email)")
         print("Password: \(password)")
@@ -58,6 +59,7 @@ class AuthService{
         self.currentUser = try? snapshot.data(as: UserModel.self)
     }
     
+    @MainActor
     func signOut(){
         try? Auth.auth().signOut()
         self.userSession = nil
