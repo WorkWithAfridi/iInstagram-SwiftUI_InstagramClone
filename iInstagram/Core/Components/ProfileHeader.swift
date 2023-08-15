@@ -52,7 +52,7 @@ struct ProfileHeader: View {
             ).padding(.horizontal)
             Button{
                 if(user.isCurrentUser){
-                    print("Show profile")
+                    print("Edit profile")
                     showEditProfile.toggle()
                 }else{
                     print("Follow user")
@@ -76,7 +76,7 @@ struct ProfileHeader: View {
             Divider()
         }
         .fullScreenCover(isPresented: $showEditProfile) {
-            Text("Edit profile view")
+            EditProfileView()
         }
     }
 }
