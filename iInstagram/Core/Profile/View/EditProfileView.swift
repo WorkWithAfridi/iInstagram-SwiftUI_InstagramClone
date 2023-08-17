@@ -10,7 +10,13 @@ import PhotosUI
 
 struct EditProfileView: View {
     
-    @StateObject var viewModel = EditProfileViewModel()
+    @StateObject var viewModel : EditProfileViewModel
+    private var user: UserModel?
+    
+    init(user: UserModel){
+        self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
+        self.user = user
+    }
     
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -25,7 +31,11 @@ struct EditProfileView: View {
                     .fontWeight(.semibold)
                 Spacer()
                 Button{
-                    print("Profile editing done")
+                    Task{
+                        try await viewModel.updateUserData()
+                        dismiss()
+                    }
+                    
                 } label: {
                     Text("Done")
                         .font(.subheadline)
@@ -61,8 +71,8 @@ struct EditProfileView: View {
             .padding(.vertical, 8)
             Divider()
             VStack{
-                EditProfileTextField(title: "Name", placeholder: "Khondakar Afridi", text: $viewModel.nameController )
-                EditProfileTextField(title: "Bio", placeholder: "Software Engineer | App Developer", text: $viewModel.bioController )
+                EditProfileTextField(title: "Name", placeholder: "\(user?.fullname ?? "Your username")", text: $viewModel.nameController )
+                EditProfileTextField(title: "Bio", placeholder: "\(user?.bio ?? "Your bio")", text: $viewModel.bioController )
             }
             .padding(.vertical, 5)
             Spacer()
@@ -72,6 +82,7 @@ struct EditProfileView: View {
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView()
+        EditProfileView(
+            user: UserModel.MOCK_USERS[0])
     }
 }
