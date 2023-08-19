@@ -15,6 +15,12 @@ class EditProfileViewModel : ObservableObject {
     @Published var user: UserModel
     init(user: UserModel) {
         self.user = user
+        if let fullname = user.fullname {
+            self.nameController = fullname
+        }
+        if let userBio = user.bio {
+            self.bioController = userBio
+        }
     }
     
     @Published var selectedImage: PhotosPickerItem?{

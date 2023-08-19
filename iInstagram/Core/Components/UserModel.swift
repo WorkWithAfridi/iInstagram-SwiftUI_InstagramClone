@@ -27,7 +27,7 @@ extension UserModel{
         .init(
             id: NSUUID().uuidString,
             username: "Mr_m.user",
-            profileImageUrl: "profile-img",
+            profileImageUrl: nil,
             fullname: "Mr Mock User",
             bio: "Hello world - this is a test user",
             email: "m.user@gmail.com"
@@ -35,7 +35,7 @@ extension UserModel{
         .init(
             id: NSUUID().uuidString,
             username: "Mr_m.user 1",
-            profileImageUrl: "profile-img",
+            profileImageUrl: nil,
             fullname: "Mr Mock User 1",
             bio: "Hello world - this is a test user 1",
             email: "m.user1@gmail.com"
@@ -43,7 +43,7 @@ extension UserModel{
         .init(
             id: NSUUID().uuidString,
             username: "Mr_m.user 2",
-            profileImageUrl: "profile-img",
+            profileImageUrl: nil,
             fullname: "Mr Mock User 2",
             bio: "Hello world - this is a test user 2",
             email: "m.user2@gmail.com"
@@ -51,7 +51,7 @@ extension UserModel{
         .init(
             id: NSUUID().uuidString,
             username: "Mr_m.user 3",
-            profileImageUrl: "profile-img",
+            profileImageUrl: nil,
             fullname: nil,
             bio: "Hello world - this is a test user 3",
             email: "m.user3@gmail.com"
