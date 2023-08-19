@@ -11,7 +11,7 @@ struct ProfieView: View {
     let user: UserModel
     var posts: [PostModel] {
         return PostModel.MOCK_POSTS.filter({
-            $0.user.username == user.username
+            $0.user?.username == user.username
         })
     }
     

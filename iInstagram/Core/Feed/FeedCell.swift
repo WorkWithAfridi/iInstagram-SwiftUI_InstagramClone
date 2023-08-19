@@ -13,8 +13,8 @@ struct FeedCell: View {
         VStack{
             if post.user != nil{
                 HStack{
-                    CircularProfileImageView(user: post.user, size: .xSmall)
-                    Text(post.user.username ?? "")
+                    CircularProfileImageView(user: post.user!, size: .xSmall)
+                    Text(post.user?.username ?? "")
                         .font(.footnote)
                         .fontWeight(.semibold)
                     Spacer()
@@ -53,7 +53,7 @@ struct FeedCell: View {
                 .padding(.leading)
                 .padding(.top, 2)
             HStack{
-                Text(post.user.username ?? "").fontWeight(.semibold) +
+                Text(post.user?.username ?? "").fontWeight(.semibold) +
                 Text(" \(post.caption)")
             }
             .frame(maxWidth: .infinity, alignment: .leading)

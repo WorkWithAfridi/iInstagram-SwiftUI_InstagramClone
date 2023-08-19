@@ -13,15 +13,20 @@ struct UploadPostView: View {
     @State private var caption = ""
     @State private var imagePickerPresented = false
     @StateObject var viewModel = UploadPostViewModel()
+    
+    func dismissPage(){
+        caption = ""
+        viewModel.selectedImage = nil
+        viewModel.postImage = nil
+        mainTabViewIndex = 0
+    }
+    
     var body: some View {
         VStack{
             HStack{
                 Button{
                     print("Cancel button pressed")
-                    caption = ""
-                    viewModel.selectedImage = nil
-                    viewModel.postImage = nil
-                    mainTabViewIndex = 0
+                    dismissPage()
                 } label: {
                     Text("Cancel")
                 }
@@ -30,7 +35,10 @@ struct UploadPostView: View {
                     .fontWeight(.semibold)
                 Spacer()
                 Button{
-                    print("Upload button pressed")
+                    Task {
+                        try await viewModel.uploadPost(caption:caption)
+                        dismissPage()
+                    }
                 } label: {
                     Text("Upload")
                         .fontWeight(.semibold)

@@ -106,6 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF54B0522A910C57008B2D99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF54B0552A910CB2008B2D99 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EF5A11A72A7BADE900C4DCB3 = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +268,8 @@
 		EF5A11CC2A7BAE6100C4DCB3 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				EFD3E0E42A8233190015E0C6 /* UploadPostView.swift */,
+				EF54B0552A910CB2008B2D99 /* ViewModel */,
+				EF54B0522A910C57008B2D99 /* View */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -351,7 +368,6 @@
 		EFD3E0E92A825A820015E0C6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EFD3E0E62A8238230015E0C6 /* UploadPostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
